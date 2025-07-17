@@ -5,7 +5,7 @@
 # 기능 입력을 받는 기능을 구현해주세요
 
 
-balance = 100,000,000
+balance = 100000000
 
 
 while True:
@@ -14,8 +14,13 @@ while True:
     if num == '4':  # 종료
         break
 
+    if num == '1':
+        pass
+
+    if num == '2':
+        pass
+
+    if num == '3':
+        pass
+
 print(f'프로그램을 종료합니다. 현재 잔액은 {balance}')
-
-
-
-
