@@ -15,13 +15,17 @@ while True:
         break
 
     if num == '1': # 입금 기능 구현 > feat/deposit
-      deposit_amount = int(input('입금할 금액을 입력해주세요: ')) # str : 5000 > int > int : 5000
-      balance += deposit_amount # balance = balance + deposit_mount
-      print(f'입금하신 금액은 {deposit_amount}원이고, 현재 잔액은 {balance}원 입니다.')
+        deposit_amount = int(input('입금할 금액을 입력해주세요. : ')) # str : 5000 > int > int : 5000
+        balance += deposit_amount # balance = balance + deposit_mount
+        print(f'입금하신 금액은 {deposit_amount} 원이고, 현재 잔액은 {balance} 원 입니다.')
+      
     if num == '2':
-        pass
+        withdraw_amount = int(input('출금할 금액을 입력해주세요. :'))
+        withdraw_amount = min(balance, withdraw_amount)
+        balance -= withdraw_amount
+        print(f'출금하신 금액은 {withdraw_amount} 원이고, 현재 잔액은 {balance} 원 입니다.')
 
     if num == '3':
         pass
 
-print(f'프로그램을 종료합니다. 현재 잔액은 {balance}')
+print(f'프로그램을 종료합니다. 현재 잔액은 {balance} 원 입니다.')
